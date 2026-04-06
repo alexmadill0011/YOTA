@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summary — My Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="nav-frame">
+      <iframe src="nav.html" title="Site Navigation"></iframe>
+    </div>
+
+    <main id="main-content" name="main">
+      <header class="page-header">
+        <h1>Summary</h1>
+        <p class="subtitle">Add your page subtitle or description here.</p>
+      </header>
+
+      <!-- ── Add your content below ─────────────────────────── -->
+
+      <!-- ─────────────────────────────────────────────────────── -->
+    </main>
+
+    <script>
+      window.addEventListener("load", () => {
+        const nav = document.querySelector("#nav-frame iframe");
+        if (nav)
+          nav.addEventListener("load", () => {
+            nav.contentWindow.postMessage({ activePage: "summary.html" }, "*");
+          });
+        try {
+          nav.contentWindow.postMessage({ activePage: "summary.html" }, "*");
+        } catch (e) {}
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coach Journey — My Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="nav-frame">
+      <iframe src="nav.html" title="Site Navigation"></iframe>
+    </div>
+
+    <main id="main-content" name="main">
+      <header class="page-header">
+        <h1>Coach Journey</h1>
+        <p class="subtitle">
+          Progression through the program should not be subjective or dependant.
+          Formalizing the process into a simple form based on standards. Both
+          the 'giving' and 'recieving' coach enter the process with the same
+          understanding and both have agency over the discussion. The 'giving'
+          coach, having been responsible for this athletes development gets a
+          chance to highlight strengths and weaknesses, while the 'receiving'
+          coach is allowed to make calls based on current group / future needs.
+        </p>
+      </header>
+
+      <section class="content-section">
+        <!-- Swimmer profile card -->
+        <div
+          style="
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px 28px;
+            display: flex;
+            gap: 32px;
+            align-items: flex-start;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+          "
+        >
+          <div style="display: flex; align-items: center; gap: 16px">
+            <div
+              style="
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+                background: rgba(196, 168, 224, 0.35);
+                border: 1.5px solid #c4a8e0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: var(--font-display);
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #6b3fa0;
+              "
+            >
+              MK
+            </div>
+            <div>
+              <div
+                style="
+                  font-family: var(--font-display);
+                  font-size: 1.2rem;
+                  font-weight: 600;
+                  color: var(--text-primary);
+                "
+              >
+                Marcus Kelly
+              </div>
+              <div
+                style="
+                  font-size: 0.82rem;
+                  color: var(--text-secondary);
+                  margin-top: 2px;
+                "
+              >
+                Age 13 · Male · SCY
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 32px; flex-wrap: wrap">
+            <div>
+              <div
+                style="
+                  font-size: 0.7rem;
+                  color: var(--text-secondary);
+                  text-transform: uppercase;
+                  letter-spacing: 0.06em;
+                  margin-bottom: 3px;
+                "
+              >
+                Group
+              </div>
+              <div
+                style="
+                  font-size: 0.88rem;
+                  font-weight: 500;
+                  color: var(--text-primary);
+                "
+              >
+                Senior Group 1
+              </div>
+            </div>
+            <div>
+              <div
+                style="
+                  font-size: 0.7rem;
+                  color: var(--text-secondary);
+                  text-transform: uppercase;
+                  letter-spacing: 0.06em;
+                  margin-bottom: 3px;
+                "
+              >
+                Season
+              </div>
+              <div
+                style="
+                  font-size: 0.88rem;
+                  font-weight: 500;
+                  color: var(--text-primary);
+                "
+              >
+                2024–25
+              </div>
+            </div>
+            <div>
+              <div
+                style="
+                  font-size: 0.7rem;
+                  color: var(--text-secondary);
+                  text-transform: uppercase;
+                  letter-spacing: 0.06em;
+                  margin-bottom: 3px;
+                "
+              >
+                Primary Stroke
+              </div>
+              <div
+                style="
+                  font-size: 0.88rem;
+                  font-weight: 500;
+                  color: var(--text-primary);
+                "
+              >
+                Freestyle / IM
+              </div>
+            </div>
+            <div>
+              <div
+                style="
+                  font-size: 0.7rem;
+                  color: var(--text-secondary);
+                  text-transform: uppercase;
+                  letter-spacing: 0.06em;
+                  margin-bottom: 3px;
+                "
+              >
+                Eval Date
+              </div>
+              <div
+                style="
+                  font-size: 0.88rem;
+                  font-weight: 500;
+                  color: var(--text-primary);
+                "
+              >
+                April 2025
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event times table -->
+        <h2
+          style="
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+          "
+        >
+          Event Times &amp; Classification
+        </h2>
+
+        <div class="table-wrap" style="margin-bottom: 36px">
+          <table class="standards-table">
+            <thead>
+              <tr>
+                <th>Event</th>
+                <th>Current Time</th>
+                <th>Classification</th>
+                <th>B</th>
+                <th>BB</th>
+                <th>A</th>
+                <th>AA</th>
+                <th>AAA</th>
+                <th>AAAA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="group-header">
+                <td colspan="9">Freestyle</td>
+              </tr>
+              <tr>
+                <td>50 Free</td>
+                <td class="time"><strong>0:24.81</strong></td>
+                <td><span class="rating-aaa">AAA</span></td>
+                <td class="time" style="color: var(--text-secondary)">
+                  0:30.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  0:27.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  0:26.29
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  0:25.59
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  0:24.99
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  0:24.19
+                </td>
+              </tr>
+              <tr>
+                <td>100 Free</td>
+                <td class="time"><strong>0:54.23</strong></td>
+                <td><span class="rating-aa">AA</span></td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:05.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:00.29
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  0:57.89
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  0:55.79
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  0:54.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  0:52.79
+                </td>
+              </tr>
+              <tr>
+                <td><span class="circle-highlight">200 Free</span></td>
+                <td class="time"><strong>2:01.47</strong></td>
+                <td><span class="rating-aa">AA</span></td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:24.19
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:12.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:07.29
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:03.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:59.89
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:57.29
+                </td>
+              </tr>
+              <tr>
+                <td>500 Free</td>
+                <td class="time"><strong>5:32.08</strong></td>
+                <td><span class="rating-a">A</span></td>
+                <td class="time" style="color: var(--text-secondary)">
+                  6:31.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  5:59.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  5:44.19
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  5:34.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  5:25.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  5:17.29
+                </td>
+              </tr>
+              <tr>
+                <td>1000 Free</td>
+                <td class="time"><strong>11:44.32</strong></td>
+                <td><span class="rating-a">A</span></td>
+                <td class="time" style="color: var(--text-secondary)">
+                  13:45.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  12:38.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  12:06.29
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  11:46.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  11:27.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  11:09.49
+                </td>
+              </tr>
+              <tr>
+                <td>1650 Free</td>
+                <td class="time">—</td>
+                <td>—</td>
+                <td class="time" style="color: var(--text-secondary)">
+                  22:49.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  20:56.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  20:02.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  19:28.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  18:57.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  18:26.09
+                </td>
+              </tr>
+
+              <tr class="group-header">
+                <td colspan="9">Backstroke</td>
+              </tr>
+              <tr>
+                <td>100 Back</td>
+                <td class="time"><strong>1:03.14</strong></td>
+                <td><span class="rating-bb">BB</span></td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:16.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:10.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:06.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:03.89
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:01.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  0:59.29
+                </td>
+              </tr>
+              <tr>
+                <td><span class="circle-highlight">200 Back</span></td>
+                <td class="time"><strong>2:17.62</strong></td>
+                <td><span class="rating-bb">BB</span></td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:44.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:30.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:23.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:18.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:13.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:08.49
+                </td>
+              </tr>
+
+              <tr class="group-header">
+                <td colspan="9">Breaststroke</td>
+              </tr>
+              <tr>
+                <td>100 Breast</td>
+                <td class="time"><strong>1:13.88</strong></td>
+                <td><span class="rating-bb">BB</span></td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:27.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:20.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:16.89
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:14.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:11.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:09.09
+                </td>
+              </tr>
+              <tr>
+                <td><span class="circle-highlight">200 Breast</span></td>
+                <td class="time"><strong>2:42.15</strong></td>
+                <td><span class="rating-b">B</span></td>
+                <td class="time" style="color: var(--text-secondary)">
+                  3:12.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:56.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:48.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:42.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:36.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:31.09
+                </td>
+              </tr>
+
+              <tr class="group-header">
+                <td colspan="9">Butterfly</td>
+              </tr>
+              <tr>
+                <td>100 Fly</td>
+                <td class="time"><strong>1:02.47</strong></td>
+                <td><span class="rating-a">A</span></td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:14.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:08.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:04.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  1:01.89
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  0:59.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  0:57.49
+                </td>
+              </tr>
+              <tr>
+                <td><span class="circle-highlight">200 Fly</span></td>
+                <td class="time">—</td>
+                <td>—</td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:44.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:30.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:23.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:18.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:12.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:07.49
+                </td>
+              </tr>
+
+              <tr class="group-header">
+                <td colspan="9">Individual Medley</td>
+              </tr>
+              <tr>
+                <td><span class="circle-highlight">200 IM</span></td>
+                <td class="time"><strong>2:18.04</strong></td>
+                <td><span class="rating-aa">AA</span></td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:44.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:30.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:23.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:18.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:13.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  2:08.09
+                </td>
+              </tr>
+              <tr>
+                <td><span class="circle-highlight">400 IM</span></td>
+                <td class="time"><strong>5:04.77</strong></td>
+                <td><span class="rating-a">A</span></td>
+                <td class="time" style="color: var(--text-secondary)">
+                  6:02.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  5:32.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  5:17.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  5:06.09
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  4:55.49
+                </td>
+                <td class="time" style="color: var(--text-secondary)">
+                  4:45.49
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Training Set Results -->
+        <h2
+          style="
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+          "
+        >
+          Training Set — 20 × 100 on 1:30
+        </h2>
+        <p
+          style="
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+          "
+        >
+          Goal: hold consistent pace. Target average: sub-1:05. Session average:
+          <strong>1:01.4</strong> — above target standard.
+        </p>
+
+        <div class="table-wrap">
+          <table class="standards-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Split</th>
+                <th>Δ Avg</th>
+                <th>#</th>
+                <th>Split</th>
+                <th>Δ Avg</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td class="time">1:03.2</td>
+                <td class="time" style="color: #2e8b6e">+1.8</td>
+                <td>11</td>
+                <td class="time">1:01.4</td>
+                <td class="time" style="color: #2e8b6e">0.0</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="time">1:02.8</td>
+                <td class="time" style="color: #2e8b6e">+1.4</td>
+                <td>12</td>
+                <td class="time">1:00.9</td>
+                <td class="time" style="color: #2e8b6e">-0.5</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td class="time">1:02.1</td>
+                <td class="time" style="color: #2e8b6e">+0.7</td>
+                <td>13</td>
+                <td class="time">1:01.1</td>
+                <td class="time" style="color: #2e8b6e">-0.3</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td class="time">1:01.8</td>
+                <td class="time" style="color: #2e8b6e">+0.4</td>
+                <td>14</td>
+                <td class="time">1:00.7</td>
+                <td class="time" style="color: #2e8b6e">-0.7</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td class="time">1:01.5</td>
+                <td class="time" style="color: #2e8b6e">+0.1</td>
+                <td>15</td>
+                <td class="time">1:01.3</td>
+                <td class="time" style="color: #2e8b6e">-0.1</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td class="time">1:01.2</td>
+                <td class="time" style="color: #2e8b6e">-0.2</td>
+                <td>16</td>
+                <td class="time">1:00.8</td>
+                <td class="time" style="color: #2e8b6e">-0.6</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td class="time">1:01.9</td>
+                <td class="time" style="color: #c8622a">+0.5</td>
+                <td>17</td>
+                <td class="time">1:01.6</td>
+                <td class="time" style="color: #2e8b6e">+0.2</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td class="time">1:01.4</td>
+                <td class="time" style="color: #2e8b6e">0.0</td>
+                <td>18</td>
+                <td class="time">1:01.0</td>
+                <td class="time" style="color: #2e8b6e">-0.4</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td class="time">1:00.6</td>
+                <td class="time" style="color: #2e8b6e">-0.8</td>
+                <td>19</td>
+                <td class="time">1:00.4</td>
+                <td class="time" style="color: #2e8b6e">-1.0</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td class="time">1:01.1</td>
+                <td class="time" style="color: #2e8b6e">-0.3</td>
+                <td>20</td>
+                <td class="time">0:59.8</td>
+                <td class="time" style="color: #6b3fa0; font-weight: 600">
+                  -1.6
+                </td>
+              </tr>
+              <tr class="age-standard">
+                <td colspan="2" style="font-weight: 600">Session Average</td>
+                <td class="time" style="font-weight: 600">1:01.4</td>
+                <td colspan="2" style="font-weight: 600">Fastest / Slowest</td>
+                <td class="time" style="font-weight: 600">0:59.8 / 1:03.2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Coach notes -->
+        <div
+          style="
+            margin-top: 24px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+          "
+        >
+          <p
+            style="
+              font-size: 0.75rem;
+              font-weight: 600;
+              color: #6b3fa0;
+              text-transform: uppercase;
+              letter-spacing: 0.06em;
+              margin-bottom: 10px;
+            "
+          >
+            Coach Notes
+          </p>
+          <p
+            style="
+              font-size: 0.85rem;
+              color: var(--text-secondary);
+              line-height: 1.75;
+              margin: 0;
+            "
+          >
+            Marcus shows strong aerobic base and excellent consistency across
+            the set. Negative split on final 5 repeats is a promising indicator
+            of pacing maturity. Breaststroke and 200 Fly need targeted attention
+            before senior group advancement. Recommend threshold work 3×/week
+            with continued IM focus.
+          </p>
+        </div>
+      </section>
+
+      <!-- ─────────────────────────────────────────────────────── -->
+    </main>
+
+    <script>
+      window.addEventListener("load", () => {
+        const nav = document.querySelector("#nav-frame iframe");
+        if (nav)
+          nav.addEventListener("load", () => {
+            nav.contentWindow.postMessage(
+              { activePage: "coachjourney.html" },
+              "*"
+            );
+          });
+        try {
+          nav.contentWindow.postMessage(
+            { activePage: "coachjourney.html" },
+            "*"
+          );
+        } catch (e) {}
+      });
+    </script>
+  </body>
+</html>

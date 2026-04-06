@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math — My Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Left nav (loaded from nav.html) -->
+  <div id="nav-frame">
+    <iframe src="nav.html" title="Site Navigation"></iframe>
+  </div>
+
+  <!-- Main content area -->
+  <main id="main-content" name="main">
+
+    <header class="page-header">
+      <h1>Math</h1>
+      <p class="subtitle">USA Swimming Data shows us average progression over time. The Purple highlight shows the relevant ages for the races selected as a team focus, while we'll have to substitute 100's or 50's for younger ages the math still stands from the perspective of creating standards.</p>
+    </header>
+
+    <!-- ── Team Focus Events Table ───────────────────────── -->
+
+    <section class="content-section">
+      <h2>Team Focus Events</h2>
+
+      <div class="table-wrap">
+        <table class="standards-table">
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>Men SCY</th>
+              <th>Women SCY</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr class="group-header"><td colspan="3">Freestyle</td></tr>
+            <tr>
+              <td><span class="circle-highlight">200 Free</span></td>
+              <td class="time">1:45.19</td>
+              <td class="time">1:56.99</td>
+            </tr>
+
+            <tr class="group-header"><td colspan="3">Backstroke</td></tr>
+            <tr>
+              <td><span class="circle-highlight">200 Back</span></td>
+              <td class="time">1:56.99</td>
+              <td class="time">2:07.99</td>
+            </tr>
+
+            <tr class="group-header"><td colspan="3">Breaststroke</td></tr>
+            <tr>
+              <td><span class="circle-highlight">200 Breast</span></td>
+              <td class="time">2:11.99</td>
+              <td class="time">2:28.59</td>
+            </tr>
+
+            <tr class="group-header"><td colspan="3">Butterfly</td></tr>
+            <tr>
+              <td><span class="circle-highlight">200 Fly</span></td>
+              <td class="time">1:57.79</td>
+              <td class="time">2:12.39</td>
+            </tr>
+
+            <tr class="group-header"><td colspan="3">Individual Medley</td></tr>
+            <tr>
+              <td><span class="circle-highlight">200 IM</span></td>
+              <td class="time">1:57.79</td>
+              <td class="time">2:10.99</td>
+            </tr>
+            <tr>
+              <td><span class="circle-highlight">400 IM</span></td>
+              <td class="time">4:15.59</td>
+              <td class="time">4:38.99</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ── National Improvement % by Age ────────────────── -->
+
+    <section class="content-section mt-lg">
+      <h2>National Improvement % by Age</h2>
+
+      <div class="table-wrap">
+        <table class="standards-table" id="improvement-table">
+          <thead>
+            <tr>
+              <th>Age</th>
+              <th>Improvement %</th>
+              <th>M 200 Free</th>
+              <th>W 200 Free</th>
+              <th>M 200 Back</th>
+              <th>W 200 Back</th>
+              <th>M 200 Breast</th>
+              <th>W 200 Breast</th>
+              <th>M 200 Fly</th>
+              <th>W 200 Fly</th>
+              <th>M 200 IM</th>
+              <th>W 200 IM</th>
+              <th>M 400 IM</th>
+              <th>W 400 IM</th>
+            </tr>
+          </thead>
+          <tbody id="improvement-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+  <script>
+    function toDisplay(s) {
+      const mins = Math.floor(s / 60);
+      const secs = s % 60;
+      return mins + ':' + secs.toFixed(2).padStart(5, '0');
+    }
+
+    const age15Standards = [1*60+45.19, 1*60+56.99, 1*60+56.99, 2*60+7.99, 2*60+11.99, 2*60+28.59, 1*60+57.79, 2*60+12.39, 1*60+57.79, 2*60+10.99, 4*60+15.59, 4*60+38.99];
+
+    const ages       = [5,    6,    7,    8,    9,    10,   11,   12,   13,   14,   15,   16,   17,   18  ];
+    const improvements = [0.129,0.129,0.129,0.129,0.129,0.129,0.099,0.099,0.07, 0.07, 0.033,0.033,0.033,0.033];
+
+    const age15Index = ages.indexOf(15); // = 10
+
+    // Build computed times for all ages iteratively
+    // computedTimes[i] = array of 12 event times for ages[i]
+    const computedTimes = Array.from({length: ages.length}, () => new Array(12));
+
+    // Seed age 15
+    age15Standards.forEach((std, col) => {
+      computedTimes[age15Index][col] = std;
+    });
+
+    // Walk backwards from age 14 down to 5
+    // Each row's time = next (older) row's time / (1 - that row's improvement%)
+    for (let i = age15Index - 1; i >= 0; i--) {
+      const pct = improvements[i + 1]; // the improvement % that gets you FROM this age TO the next
+      for (let col = 0; col < 12; col++) {
+        computedTimes[i][col] = computedTimes[i + 1][col] / (1 - pct);
+      }
+    }
+
+    // Walk forwards from age 16 up to 18
+    // Each row's time = previous (younger) row's time * (1 - this row's improvement%)
+    for (let i = age15Index + 1; i < ages.length; i++) {
+      const pct = improvements[i];
+      for (let col = 0; col < 12; col++) {
+        computedTimes[i][col] = computedTimes[i - 1][col] * (1 - pct);
+      }
+    }
+
+    // Render rows
+    const tbody = document.getElementById('improvement-tbody');
+    ages.forEach((age, i) => {
+      const tr = document.createElement('tr');
+      if (age === 15) tr.className = 'age-standard';
+      else if (age >= 13) tr.className = 'age-highlight';
+
+      const tdAge = document.createElement('td');
+      tdAge.textContent = age;
+      tr.appendChild(tdAge);
+
+      const tdPct = document.createElement('td');
+      tdPct.className = 'time';
+      tdPct.textContent = (improvements[i] * 100).toFixed(2) + '%';
+      tr.appendChild(tdPct);
+
+      computedTimes[i].forEach(secs => {
+        const td = document.createElement('td');
+        td.className = 'time';
+        td.textContent = toDisplay(secs);
+        tr.appendChild(td);
+      });
+
+      tbody.appendChild(tr);
+    });
+  </script>
+  </script>
+
+    <!-- ─────────────────────────────────────────────────────── -->
+
+  </main>
+
+<script>
+  // Notify nav of current page
+  window.addEventListener('load', () => {
+    const nav = document.querySelector('#nav-frame iframe');
+    if (nav) nav.addEventListener('load', () => {
+      nav.contentWindow.postMessage({ activePage: 'math.html' }, '*');
+    });
+    // Also try immediately if nav already loaded
+    try { nav.contentWindow.postMessage({ activePage: 'math.html' }, '*'); } catch(e) {}
+  });
+</script>
+</body>
+</html>

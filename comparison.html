@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comparison — My Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div id="nav-frame">
+    <iframe src="nav.html" title="Site Navigation"></iframe>
+  </div>
+
+  <main id="main-content" name="main">
+
+    <header class="page-header">
+      <h1>Comparison</h1>
+      <p class="subtitle">We set our own cielings - YMCA Nationals is too low </p>
+      <p class="subtitle">The argument is not that we must win the other meets, but that by setting our sights on bigger stages we'll better serve everyone. Youth development relies on the teaching and understanding of hard work, goal setting, and dealing with adversity. If our training and goals are low we can never promise to develop the athletes adequatly.</p>
+    </header>
+
+    <section class="content-section">
+
+      <div style="display:flex; flex-direction:column; gap:24px;">
+
+        <!-- Row 1: Current -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:center;">
+
+          <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px;">
+            <p style="text-align:center; font-family:var(--font-display); font-size:1.1rem; font-weight:600; color:var(--text-primary); margin-bottom:20px;">Current</p>
+            <svg id="curve1" width="100%" viewBox="0 0 600 180" style="display:block;">
+              <line x1="10" y1="165" x2="590" y2="165" stroke="#ccc" stroke-width="1"/>
+              <path id="fill1" fill="rgba(200,98,42,0.08)"/>
+              <path id="line1" fill="none" stroke="#c8622a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <line id="dash1" stroke="#1d9e75" stroke-width="1.5" stroke-dasharray="5 4"/>
+              <line id="leader1" stroke="#1d9e75" stroke-width="1"/>
+              <text id="t1a" font-family="inherit" font-size="11" fill="#1d9e75"/>
+              <text id="t1b" font-family="inherit" font-size="11" fill="#1d9e75"/>
+              <text id="t1c" font-family="inherit" font-size="11" fill="#1d9e75"/>
+            </svg>
+          </div>
+
+          <div style="padding:8px 4px;">
+            <p style="font-family:var(--font-display); font-size:1rem; font-weight:600; color:var(--text-primary); margin-bottom:10px;">Lower ceiling, compressed results</p>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.75; margin-bottom:10px;">When the goal standard for a program's top group is modest, training naturally orients toward achieving that standard — and stops there. Workouts, expectations, and competitive targets all calibrate to a lower ceiling.</p>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.75;">The result is a tight, left-leaning distribution. Most athletes cluster around a narrow performance band, top-end outliers are rare, and the program's overall talent spread remains limited. The goal dictates the training, and the training dictates the outcome.</p>
+          </div>
+
+        </div>
+
+        <!-- Row 2: Goal -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:center;">
+
+          <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px;">
+            <p style="text-align:center; font-family:var(--font-display); font-size:1.1rem; font-weight:600; color:var(--text-primary); margin-bottom:20px;">Goal</p>
+            <svg id="curve2" width="100%" viewBox="0 0 600 180" style="display:block;">
+              <line x1="10" y1="165" x2="590" y2="165" stroke="#ccc" stroke-width="1"/>
+              <path id="fill2" fill="rgba(200,98,42,0.08)"/>
+              <path id="line2" fill="none" stroke="#c8622a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <line id="dash2" stroke="#1d9e75" stroke-width="1.5" stroke-dasharray="5 4"/>
+              <line id="leader2" stroke="#1d9e75" stroke-width="1"/>
+              <text id="t2a" font-family="inherit" font-size="11" fill="#1d9e75"/>
+              <text id="t2b" font-family="inherit" font-size="11" fill="#1d9e75"/>
+              <text id="t2c" font-family="inherit" font-size="11" fill="#1d9e75"/>
+            </svg>
+          </div>
+
+          <div style="padding:8px 4px;">
+            <p style="font-family:var(--font-display); font-size:1rem; font-weight:600; color:var(--text-primary); margin-bottom:10px;">Higher ceiling, broader talent spread</p>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.75; margin-bottom:10px;">When the top group trains toward an elite national standard, the entire program is pulled upward. Training loads, time standards, race strategy, and daily expectations all rise to match the ceiling — not just for the top group, but throughout the pipeline below it.</p>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.75;">The distribution widens and shifts right. The mean rises, the spread broadens, and elite outliers appear naturally. A higher goal produces a harder training environment, which in turn produces a deeper and more capable roster across all levels.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    <!-- ── Men SCY Standards Table ────────────────────────── -->
+
+    <section class="content-section mt-lg">
+      <h2>Men SCY — Meet Standards</h2>
+
+      <div class="table-wrap" style="overflow-x:auto;">
+        <table class="standards-table" style="min-width:900px;">
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th style="background:rgba(196,168,224,0.2); color:#6b3fa0;">YNATS 2027</th>
+              <th style="background:rgba(200,98,42,0.08); color:#7a3a15;">Win</th>
+              <th style="background:rgba(200,98,42,0.08); color:#7a3a15;">Top 8</th>
+              <th style="background:rgba(200,98,42,0.08); color:#7a3a15;">Top 16</th>
+              <th>Sectionals</th>
+              <th>Futures</th>
+              <th>Winter Jrs</th>
+              <th>Juniors</th>
+              <th>NCAA D1</th>
+              <th>ACC</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="group-header"><td colspan="11">Freestyle</td></tr>
+            <tr>
+              <td>50 Free</td>
+              <td class="time" style="background:rgba(196,168,224,0.1);">0:22.09</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">0:20.02</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">0:20.64</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">0:20.93</td>
+              <td class="time">0:21.69</td><td class="time">0:21.29</td><td class="time">0:20.49</td><td class="time">0:20.39</td><td class="time">0:19.43</td><td class="time">0:19.25</td>
+            </tr>
+            <tr>
+              <td>100 Free</td>
+              <td class="time" style="background:rgba(196,168,224,0.1);">0:48.19</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">0:44.07</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">0:45.27</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">0:46.08</td>
+              <td class="time">0:47.38</td><td class="time">0:46.39</td><td class="time">0:44.89</td><td class="time">0:44.39</td><td class="time">0:42.55</td><td class="time">0:42.32</td>
+            </tr>
+            <tr>
+              <td><span class="circle-highlight">200 Free</span></td>
+              <td class="time" style="background:rgba(196,168,224,0.1);">1:45.19</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">1:37.20</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">1:39.71</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">1:40.97</td>
+              <td class="time">1:43.79</td><td class="time">1:41.59</td><td class="time">1:38.39</td><td class="time">1:37.59</td><td class="time">1:33.93</td><td class="time">1:33.97</td>
+            </tr>
+            <tr>
+              <td>500 Free</td>
+              <td class="time" style="background:rgba(196,168,224,0.1);">4:46.99</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">4:25.20</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">4:33.49</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">4:36.59</td>
+              <td class="time">4:42.79</td><td class="time">4:37.09</td><td class="time">4:28.79</td><td class="time">4:25.59</td><td class="time">4:18.07</td><td class="time">4:18.52</td>
+            </tr>
+            <tr>
+              <td>1000 Free</td>
+              <td class="time" style="background:rgba(196,168,224,0.1);">9:58.29</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">9:07.23</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">9:27.40</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">9:32.78</td>
+              <td class="time">9:42.99</td><td class="time">9:34.29</td><td class="time">9:22.69</td><td class="time">9:13.19</td><td class="time">—</td><td class="time">—</td>
+            </tr>
+            <tr>
+              <td>1650 Free</td>
+              <td class="time" style="background:rgba(196,168,224,0.1);">16:45.79</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">15:18.28</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">15:59.36</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">16:19.22</td>
+              <td class="time">16:24.39</td><td class="time">16:05.49</td><td class="time">15:40.39</td><td class="time">15:31.39</td><td class="time">15:06.60</td><td class="time">15:07.09</td>
+            </tr>
+
+            <tr class="group-header"><td colspan="11">Backstroke</td></tr>
+            <tr>
+              <td>100 Back</td>
+              <td class="time" style="background:rgba(196,168,224,0.1);">0:53.89</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">0:47.66</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">0:48.91</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">0:50.27</td>
+              <td class="time">0:53.39</td><td class="time">0:51.49</td><td class="time">0:49.19</td><td class="time">0:48.59</td><td class="time">0:46.29</td><td class="time">0:46.71</td>
+            </tr>
+            <tr>
+              <td><span class="circle-highlight">200 Back</span></td>
+              <td class="time" style="background:rgba(196,168,224,0.1);">1:56.99</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">1:45.69</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">1:49.25</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">1:50.32</td>
+              <td class="time">1:54.89</td><td class="time">1:52.79</td><td class="time">1:47.79</td><td class="time">1:46.49</td><td class="time">1:42.14</td><td class="time">1:40.72</td>
+            </tr>
+
+            <tr class="group-header"><td colspan="11">Breaststroke</td></tr>
+            <tr>
+              <td>100 Breast</td>
+              <td class="time" style="background:rgba(196,168,224,0.1);">1:00.69</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">0:54.05</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">0:56.27</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">0:57.08</td>
+              <td class="time">0:59.79</td><td class="time">0:57.99</td><td class="time">0:55.49</td><td class="time">0:54.99</td><td class="time">0:52.58</td><td class="time">0:52.48</td>
+            </tr>
+            <tr>
+              <td><span class="circle-highlight">200 Breast</span></td>
+              <td class="time" style="background:rgba(196,168,224,0.1);">2:11.99</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">1:57.34</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">2:01.18</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">2:04.86</td>
+              <td class="time">2:09.69</td><td class="time">2:07.99</td><td class="time">2:01.59</td><td class="time">2:00.39</td><td class="time">1:54.95</td><td class="time">1:54.45</td>
+            </tr>
+
+            <tr class="group-header"><td colspan="11">Butterfly</td></tr>
+            <tr>
+              <td>100 Fly</td>
+              <td class="time" style="background:rgba(196,168,224,0.1);">0:52.79</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">0:46.89</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">0:48.99</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">0:49.57</td>
+              <td class="time">0:52.09</td><td class="time">0:50.59</td><td class="time">0:48.69</td><td class="time">0:48.19</td><td class="time">0:46.11</td><td class="time">0:45.77</td>
+            </tr>
+            <tr>
+              <td><span class="circle-highlight">200 Fly</span></td>
+              <td class="time" style="background:rgba(196,168,224,0.1);">1:57.79</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">1:44.76</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">1:51.12</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">1:53.23</td>
+              <td class="time">1:55.09</td><td class="time">1:53.69</td><td class="time">1:49.09</td><td class="time">1:47.89</td><td class="time">1:43.79</td><td class="time">1:43.34</td>
+            </tr>
+
+            <tr class="group-header"><td colspan="11">Individual Medley</td></tr>
+            <tr>
+              <td><span class="circle-highlight">200 IM</span></td>
+              <td class="time" style="background:rgba(196,168,224,0.1);">1:57.79</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">1:47.81</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">1:52.00</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">1:53.35</td>
+              <td class="time">1:57.09</td><td class="time">1:53.89</td><td class="time">1:49.59</td><td class="time">1:48.49</td><td class="time">1:44.13</td><td class="time">1:44.99</td>
+            </tr>
+            <tr>
+              <td><span class="circle-highlight">400 IM</span></td>
+              <td class="time" style="background:rgba(196,168,224,0.1);">4:15.59</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">3:50.97</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">4:00.19</td>
+              <td class="time" style="background:rgba(200,98,42,0.06);">4:03.97</td>
+              <td class="time">4:11.19</td><td class="time">4:06.99</td><td class="time">3:56.49</td><td class="time">3:52.69</td><td class="time">3:46.19</td><td class="time">3:45.42</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────── -->
+
+  </main>
+
+<script>
+  // mean: 0-1 position along x axis
+  // sigma: spread (lower = narrower/taller, higher = wider/flatter)
+  function drawBell(lineId, fillId, dashId, leaderId, ta, tb, tc, mean, sigma) {
+    const W = 600, baseline = 165, peakY = 20, pad = 10;
+    const steps = 400;
+    const pts = [];
+    for (let i = 0; i <= steps; i++) {
+      const t = i / steps;
+      const x = pad + t * (W - pad * 2);
+      const z = (t - mean) / sigma;
+      const g = Math.exp(-0.5 * z * z);
+      pts.push([+x.toFixed(2), +(baseline - g * (baseline - peakY)).toFixed(2)]);
+    }
+    const d = pts.map((p, i) => (i === 0 ? `M${p[0]},${p[1]}` : `L${p[0]},${p[1]}`)).join(' ');
+    document.getElementById(lineId).setAttribute('d', d);
+    document.getElementById(fillId).setAttribute('d', d + ` L${pts[pts.length-1][0]},${baseline} L${pts[0][0]},${baseline} Z`);
+
+    // Peak x position
+    const cx = pad + mean * (W - pad * 2);
+    const peakActualY = peakY; // peak is at mean
+
+    const el = document.getElementById(dashId);
+    el.setAttribute('x1', cx); el.setAttribute('y1', peakActualY);
+    el.setAttribute('x2', cx); el.setAttribute('y2', baseline);
+
+    // Leader line — point left if mean > 0.6 to avoid overflow
+    const goLeft = mean > 0.55;
+    const lx2 = goLeft ? cx - 44 : cx + 44;
+    const ly2 = peakActualY + 30;
+    const ldr = document.getElementById(leaderId);
+    ldr.setAttribute('x1', goLeft ? cx - 4 : cx + 4);
+    ldr.setAttribute('y1', peakActualY + 8);
+    ldr.setAttribute('x2', lx2);
+    ldr.setAttribute('y2', ly2);
+
+    const tx = goLeft ? lx2 - 2 : lx2 + 2;
+    const anchor = goLeft ? 'end' : 'start';
+    const a = document.getElementById(ta); a.setAttribute('x', tx); a.setAttribute('y', ly2 - 2); a.setAttribute('text-anchor', anchor); a.textContent = 'Mean';
+    const b = document.getElementById(tb); b.setAttribute('x', tx); b.setAttribute('y', ly2 + 11); b.setAttribute('text-anchor', anchor); b.textContent = 'Median';
+    const c = document.getElementById(tc); c.setAttribute('x', tx); c.setAttribute('y', ly2 + 24); c.setAttribute('text-anchor', anchor); c.textContent = 'Mode';
+  }
+
+  window.addEventListener('load', () => {
+    // Current: narrow spread (sigma=0.09), mean shifted left (0.38)
+    drawBell('line1','fill1','dash1','leader1','t1a','t1b','t1c', 0.38, 0.09);
+    // Goal: wide spread (sigma=0.18), mean shifted right (0.58)
+    drawBell('line2','fill2','dash2','leader2','t2a','t2b','t2c', 0.58, 0.18);
+
+    const nav = document.querySelector('#nav-frame iframe');
+    if (nav) nav.addEventListener('load', () => {
+      nav.contentWindow.postMessage({ activePage: 'comparison.html' }, '*');
+    });
+    try { nav.contentWindow.postMessage({ activePage: 'comparison.html' }, '*'); } catch(e) {}
+  });
+</script>
+</body>
+</html>
